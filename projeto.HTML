@@ -1,26 +1,23 @@
+<!--Salvando tarefas-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página inicial</title>
+  <title>Lista de Tarefas</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
-    <h1 div class="container">Boas vindas!</h1>
-    <p>Vamos personalizar sua saudação usando JavaScript!
-    <div div class="saudacao" id="mensagemSaudacao">Olá, visitante!</div></p>
-    <button onClick="MudarNome()">Personalizar Saudação</button><!--Função é o bloco de codigo quue pode ser chamado a qlqr momento-->
-
-    <script>
-        function MudarNome()
-        let nome = "Duda"
-        {document.getElementById("mensagemSaudacao").innerHTML = "Olá " + nome + "!";
-        }
-
-    </script>
+  <div class="container">
+    <h1>Lista de Tarefas</h1>
+    <p>Adicione suas tarefas!</p>
+    <input type="text" id="inputTarefa" placeholder="Digite uma tarefa!">
+    <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+    <p id="mensagem"></p>
+    <ul id="listaTarefas"></ul> <!--o usuario que adiciona sua propria tarefa-->
   </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
-
