@@ -1,7 +1,7 @@
 
-let tarefas = []
+    let tarefas = []
 
-function adicionarTarefa() {
+    function adicionarTarefa() {
     const inputTarefa = document.getElementById("inputTarefa")
     let tarefa = inputTarefa.value.trim()
 
@@ -57,9 +57,13 @@ function editarTarefa(i) {
     }
 }
 
-function limparLista() {
-    tarefas.length = 0
-    renderizarTarefas()
-    const mensagem = document.getElementById("mensagem")
-    mensagem.textContent = "Lista de tarefas limpa com sucesso!"
+// Nova função adicionada:
+function verificareAlertar() {
+    if (tarefas.length === 0) {
+        window.alert("Por favor, adicione um item à lista antes de tentar limpar.");
+    } 
+    else {
+        limparLista();
+    }
 }
+
